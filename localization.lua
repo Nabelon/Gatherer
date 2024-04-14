@@ -6,6 +6,8 @@
 	Processed locales: french (frFR), german (deDE), simplified chinese (zhCN), english (US or GB, default)
 ]]
 
+TREASURE_EGG 	= "brightly colored egg"
+ORE_OBSIDIANCHUNK 	= "obsidian chunk"
 if ( GetLocale() == "frFR" ) then
 	-- French localized variables
 	GATHERER_VERSION_WARNING="Nouvelle version de Gatherer d\195\169tect\195\169e, v\195\169rifiez le zone match.";
@@ -17,6 +19,7 @@ if ( GetLocale() == "frFR" ) then
 	TRADE_MINING="Minage"
 	TRADE_OPENING="Ouverture"
 	GATHER_HERBALISM="Cueillette"
+    
 
 	-- strings for gather line in chat
 	HERB_GATHER_STRING="Vous ex\195\169cutez Cueillette sur"
@@ -143,6 +146,9 @@ if ( GetLocale() == "frFR" ) then
 		if ( string.find(input, ORE_DARKIRON)) then
 			return ORE_DARKIRON;
 		end
+		if ( string.find(input, ORE_OBSIDIANCHUNK)) then
+			return ORE_OBSIDIANCHUNK;
+		end
 
 		i, j, oreClass, oreArticle, oreType = string.find(input, "([^ ]+) ([^ ]+) ([^ ]+)$");
 		if (oreClass ~= ORE_CLASS_VEIN and oreClass ~= ORE_CLASS_DEPOSIT and oreClass ~= ORE_CLASS_LODE and oreClass ~= ORE_CLASS_SEAM) then
@@ -180,6 +186,10 @@ if ( GetLocale() == "frFR" ) then
 
 		if (string.find(input, TREASURE_SONGFLOWER_G) or string.find(input, TREASURE_SONGFLOWER)) then
 			return TREASURE_SONGFLOWER, TREASURE_SONGFLOWER;
+		end
+        
+		if (string.find(input, TREASURE_EGG) ) then
+			return TREASURE_EGG, TREASURE_EGG;
 		end
 
 		for iconName in Gather_DB_IconIndex[0] do
@@ -917,6 +927,10 @@ else
 			return TREASURE_BLOODHERO, TREASURE_BLOODHERO;
 		end
 
+		if (string.find(input, TREASURE_EGG) ) then
+			return TREASURE_EGG, TREASURE_EGG;
+		end
+        
 		for iconName in Gather_DB_IconIndex[0] do
 			local index, treasure_regex, i, j, treasType;
 			if ( input == iconName ) then

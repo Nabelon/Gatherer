@@ -36,6 +36,7 @@ Gather_IconSet = {
 			[ORE_THORIUM]    = "Interface\\AddOns\\Gatherer\\Icons\\OreThorium",
 			[ORE_RTHORIUM]   = "Interface\\Addons\\Gatherer\\Icons\\OreRThorium",
 			[ORE_DARKIRON]   = "Interface\\Addons\\Gatherer\\Icons\\OreDarkIron",
+			[ORE_OBSIDIANCHUNK]   = "Interface\\Addons\\Gatherer\\Icons\\OreTin",
 		},
 		["Herb"] = {
 			["default"]               = "Interface\\AddOns\\Gatherer\\Shaded\\Green",
@@ -91,6 +92,7 @@ Gather_IconSet = {
 			[TREASURE_WHIPPERROOT]		= "Interface\\Icons\\INV_Misc_Food_55",
 			[TREASURE_WINDBLOSSOM]		= "Interface\\Icons\\INV_Misc_Food_58",
 			[TREASURE_SONGFLOWER]		= "Interface\\Icons\\Spell_Holy_MindVision",
+			[TREASURE_EGG]		= "Interface\\Icons\\TreasureEgg",
 		},
 		["Test"]	= {["default"] = "Interface\\AddOns\\Gatherer\\Shaded\\Test"},
 	},
@@ -236,6 +238,7 @@ Gather_DB_IconIndex[0] = {
 	[TREASURE_WHIPPERROOT]	= 17,
 	[TREASURE_WINDBLOSSOM]	= 18,
 	[TREASURE_SONGFLOWER]	= 19,
+	[TREASURE_EGG]	= 20,
 };
 
 Gather_DB_IconIndex[1] = {
@@ -284,6 +287,7 @@ Gather_DB_IconIndex[2] = {
 	[ORE_THORIUM]    = 8,
 	[ORE_RTHORIUM]   = 9,
 	[ORE_DARKIRON]   = 10,
+	[ORE_OBSIDIANCHUNK] = 11,
 };
 
 Gather_DB_IconIndex[3] = {
