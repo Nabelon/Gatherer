@@ -146,9 +146,6 @@ if ( GetLocale() == "frFR" ) then
 		if ( string.find(input, ORE_DARKIRON)) then
 			return ORE_DARKIRON;
 		end
-		if ( string.find(input, ORE_OBSIDIANCHUNK)) then
-			return ORE_OBSIDIANCHUNK;
-		end
 
 		i, j, oreClass, oreArticle, oreType = string.find(input, "([^ ]+) ([^ ]+) ([^ ]+)$");
 		if (oreClass ~= ORE_CLASS_VEIN and oreClass ~= ORE_CLASS_DEPOSIT and oreClass ~= ORE_CLASS_LODE and oreClass ~= ORE_CLASS_SEAM) then
@@ -899,6 +896,9 @@ else
                         return ORE_DARKIRON;
                 end
 
+		if ( string.find(input, ORE_OBSIDIANCHUNK)) then
+			return ORE_OBSIDIANCHUNK;
+		end
 		i,j, oreType, oreClass = string.find(input, "([^ ]+) ([^ ]+)$");
 		if (oreType and oreClass and ((oreClass == ORE_CLASS_VEIN) or (oreClass == ORE_CLASS_DEPOSIT))) then
 			return oreType;
